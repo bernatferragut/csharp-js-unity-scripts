@@ -1,3 +1,3 @@
-# unity-scripts
+C# / JS Unity Scripts
 
-unityscript/js and c# for unity platform
+C# and unity scripts for the unity platform
