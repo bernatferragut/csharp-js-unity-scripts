@@ -1,4 +1,4 @@
-
+// Script to Animate the Hours, Minutes and Seconds of a Clock / Analog and digital versions !
 
 using UnityEngine;
 using System;
