@@ -1,5 +1,4 @@
-// This script has been inspired by Matthew Hallberg
-
+// AutoWalk any direction your head is heading
 using UnityEngine;
 using Syste.Collections;
 
