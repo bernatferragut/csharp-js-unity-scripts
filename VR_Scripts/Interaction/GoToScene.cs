@@ -1,4 +1,4 @@
-/ VR INTERACTION 1 >  GoToScene X
+// VR INTERACTION 1 >  GoToScene X
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
