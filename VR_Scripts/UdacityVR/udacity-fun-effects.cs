@@ -22,7 +22,8 @@ public class UdacityFunEffects : MonoBehaviour {
     public GameObject[] cubes;
 
     // Use this for initialization
-    void Start () {
+    void Start () 
+    {
         cubes = new GameObject[numCubes];
 
         if (cube.gameObject.activeInHierarchy)
