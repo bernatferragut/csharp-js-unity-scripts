@@ -32,7 +32,7 @@ public class WalkController : MonoBehaviour
             } 
             else 
             {
-                walking = true;x
+                walking = true;
             }
         }
 
