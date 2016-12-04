@@ -271,3 +271,23 @@ public class AnotherClass
 }
 
 ```
+
+> **07. AwakeAndStart**
+
+```c#
+using UnityEngine;
+using System.Collections;
+
+public class AwakeAndStart : MonoBehaviour
+{
+    void Awake()
+    {
+        print("Awake called");
+    }
+    
+    void Start()
+    {
+        Debug.Log("Start called");
+    }
+}
+```
