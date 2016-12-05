@@ -311,3 +311,84 @@ public class UpdateAndFixedUpdate : MonoBehaviour
     }
 }
 ```
+
+> **09.a Vector3.Angle**
+
+```c#
+using UnityEngine;
+public class AngleExample : MonoBehaviour
+{
+	public Transform     target;
+
+	// prints "close" if the z-axis of this transform looks
+	// almost towards the target
+
+	void Update ()
+	{
+		Vector3 targetDir = target.position - transform.position;
+		float angle = Vector3.Angle( targetDir, transform.forward );
+
+		if( angle < 5.0f )
+			print( "close" );
+	}
+}
+```
+
+> **09.b Vector3.Cross**
+
+```c#
+using UnityEngine;
+using System.Collections;
+
+public class ExampleClass : MonoBehaviour 
+{
+    Vector3 GetNormal(Vector3 a, Vector3 b, Vector3 c) {
+        Vector3 side1 = b - a;
+        Vector3 side2 = c - a;
+        return Vector3.Cross(side1, side2).normalized;
+    }
+}
+```
+
+> **09.c Vector3.Distance**
+
+```c#
+using UnityEngine;
+using System.Collections;
+
+public class ExampleClass : MonoBehaviour 
+{
+    public Transform other;
+    void Example() {
+        if (other) {
+            float dist = Vector3.Distance(other.position, transform.position);
+            print("Distance to other: " + dist);
+        }
+    }
+}
+```
+
+> **09.d Vector3.Lerp**
+
+```c#
+using UnityEngine;
+using System.Collections;
+
+public class ExampleClass : MonoBehaviour 
+{
+    public Transform startMarker;
+    public Transform endMarker;
+    public float speed = 1.0F;
+    private float startTime;
+    private float journeyLength;
+    void Start() {
+        startTime = Time.time;
+        journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
+    }
+    void Update() {
+        float distCovered = (Time.time - startTime) * speed;
+        float fracJourney = distCovered / journeyLength;
+        transform.position = Vector3.Lerp(startMarker.position, endMarker.position, fracJourney);
+    }
+}
+```
