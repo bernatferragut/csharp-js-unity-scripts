@@ -658,3 +658,47 @@ public class ButtonInput : MonoBehaviour
 }
 ```
 
+> **16. AccessAnotherScript**
+
+```c#
+using UnityEngine;
+using System.Collections;
+
+public class AccessAnotherScript : MonoBehaviour
+{
+    Public GameObject objectToAccess;
+    // drag the object you're calling a method on into the inspector, or alternatively use GameObject.Find to get a handle on it
+    
+    ScriptName scriptToAccess = objectToAccess.GetComponent<ScriptName>();
+    // get the script on the object (make sure the script is a public class)      
+    
+    scriptToAccess.YourMethodName(your parameters etc);
+    // calls the method in the script on the other object.
+}
+```
+
+> **17. GetAxis**
+
+```ruby
+using UnityEngine;
+using System.Collections;
+
+public class ExampleBehaviourScript : MonoBehaviour
+{
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            GetComponent<Renderer>().material.color = Color.red;
+        }
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            GetComponent<Renderer>().material.color = Color.green;
+        }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            GetComponent<Renderer>().material.color = Color.blue;
+        }
+    }
+}
+```
