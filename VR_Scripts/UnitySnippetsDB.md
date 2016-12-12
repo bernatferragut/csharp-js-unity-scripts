@@ -677,28 +677,65 @@ public class AccessAnotherScript : MonoBehaviour
 }
 ```
 
-> **17. GetAxis**
+> **17. GetAxis** // mainly dor joysticks
 
 ```ruby
 using UnityEngine;
 using System.Collections;
 
-public class ExampleBehaviourScript : MonoBehaviour
+public class AxisSimple : MonoBehaviour
 {
+    public float range;
+    public guiText textOutput;
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            GetComponent<Renderer>().material.color = Color.red;
-        }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            GetComponent<Renderer>().material.color = Color.green;
-        }
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            GetComponent<Renderer>().material.color = Color.blue;
-        }
+        float h = Input.GetAxis("Horizontal");
+        float xPos = h * range;
+
+        transform.position = new Vector3 (xPos, 2f, 0);
+        textOutput.text = "Value Returned: " + h.ToString("F2");
+    }
+}
+
+using UnityEngine;
+using System.Collections;
+
+public class AxisRawExample : MonoBehaviour
+{
+    public float range;
+    public guiText textOutput;
+
+    void Update()
+    {
+        float h = Input.GetRaw("Horizontal");
+        float xPos = h * range;
+
+        transform.position = new Vector3 (xPos, 2f, 0);
+        textOutput.text = "Value Returned: " + h.ToString("F2");
+    }
+}
+
+using UnityEngine;
+using System.Collections;
+
+public class DualAxisExample : MonoBehaviour
+{
+    public float range;
+    public guiText textOutput;
+
+    void Update()
+    {
+        float h = Input.GetRaw("Horizontal");
+        float v = Input.GetRaw("Vertical");
+        float xPos = h * range;
+        float yPos = v * range;
+
+        transform.position = new Vector3 (xPos, 2f, 0);
+        textOutput.text = "Horizontal Value Returned: " + h.ToString("F2") + +"\nVertical Value Returned: "+v.ToString("F2");
     }
 }
 ```
+
+
+
