@@ -737,5 +737,22 @@ public class DualAxisExample : MonoBehaviour
 }
 ```
 
+> **18. MouseClick**
+
+```c#
+using UnityEngine;
+using System.Collections;
+
+public class MouseClick : MonoBehaviour
+{
+    voiv OnMouseDown()
+    {
+    rigidbody.AddForce(-transform.forward * 500f);
+    rigidbody.useGravity = true;
+    }
+}
+```
+
+
 
 
