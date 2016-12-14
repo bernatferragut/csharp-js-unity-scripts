@@ -793,7 +793,7 @@ public class YetAnotherScript : MonoBehaviour
 }
 ```
 
-> **18. UsingDeltaTime**
+> **20. UsingDeltaTime**
 
 ```c#
 using UnityEngine;
@@ -815,6 +815,29 @@ public class UsingDeltaTime : MonoBehaviour
     }
 }
 ```
+
+> **21. DatatypeScript**
+
+```c#
+using UnityEngine;
+using System.Collections;
+
+public class DatatypeScript : MonoBehaviour
+{
+ void Start()
+    {
+        // value type Variables > Struct (combined value type)
+        Vector3 pos = transform.position; // we are making a COPY
+        pos = new Vector3(0,2,0); // wont' move unless assigning it back
+
+        //Reference type variable;
+        Transform tran = transform;// we are making a REFERENCED COPY
+        tran.position = new Vector3(0,2,0);// so when we change the variable we change the original
+    }
+}
+```
+
+
 
 
 
