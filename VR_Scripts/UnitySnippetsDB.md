@@ -951,11 +951,46 @@ public class MovementControls : MonoBehaviour
     {
         float forwardMovement = Input.GetAxis("Vertical")*speed*Time.deltaTime;
         float turnMovement = Input.GetAxis("Horizontal")*turnSpeed*time.deltaTime;
-        
+
         transform.Translate(Vector3.forward*forwardMovement);
         transform.Rotate(Vector3.up*turnMovement);
     }
 }
+
+using UnityEngine;
+using System.Collections;
+
+public class Loving : MonoBehaviour
+{
+    public Rigidbody bulletPrefab;
+    public Transform firePosition;
+    public float bulletSpeed;
+
+    private Inventory inventory;
+
+    void Awake()
+    {
+        inventory = GetComponent<Inventory>();
+    }
+
+    void Update()
+    {
+        Shoot();
+    }
+
+    void Shoot()
+    {
+        if(Input.GetButtonDown("Fire1")&& inventory.myStuff.bullets > 0)
+        {
+            Rigidbody bulletInstance = Instantiate(bulletPrefab, firePosition.position, firePosition.rotation)as Rigidbody;
+            bulletInstance.AddForce(firePosition.position * bulletSpeed);
+            inventory.myStuff.bullets--;
+        }
+    }
+}
+
+
+
 ```
 
 
