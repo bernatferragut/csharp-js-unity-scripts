@@ -1047,6 +1047,28 @@ public class Arrays : MonoBehaviour
     }
 }
 ```
+> **25. Invoke**
+
+```C#
+using UnityEngine;
+using System.Collections;
+
+public class Invoke : MonoBehaviour
+{
+    public GameObject target;
+
+    void Start()
+    {
+        Invoke("SpawnObject", 2); // 2 sec delay
+    }
+
+    void SpawnObject()
+    {
+        Instantiate(target, new Vector3(0, 2, 0), Quaternion.identity);
+        // You can only invoke void Functions
+    }
+}
+```
 
 
 
