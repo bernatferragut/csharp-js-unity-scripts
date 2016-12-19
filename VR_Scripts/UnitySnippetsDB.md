@@ -37,7 +37,7 @@ public class ExampleBehaviourScript : MonoBehaviour
 ```
 > **02. Variables and Functions**
 
-```ruby
+```C#
 using UnityEngine;
 using System.Collections;
 
@@ -1022,6 +1022,28 @@ public class RocketsDestruction : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, 1.5f);//after 1.5 seconds
+    }
+}
+```
+
+> **24. Arrays**
+
+```C#
+using UnityEngine;
+using System.Collections;
+
+public class Arrays : MonoBehaviour
+{
+    public GameObject[] players;
+
+    void Start()
+    {
+        players = GameObject.FindGameObjectsWithTag("player");
+
+        for (i=0; i<players.Length; i++)
+        {
+            Debug.Log("Player Number" +i+" is named" + players[i].name);            
+        }
     }
 }
 ```
