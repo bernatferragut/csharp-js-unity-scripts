@@ -1119,6 +1119,43 @@ public class Enumscript : MonoBehaviour
 }
 ```
 
+> **26. Switch**
+
+```C#
+using UnityEngine;
+using System.Collections;
+
+public class Switch : MonoBehaviour
+{
+    public int intelligence = 5;
+
+    void Greet()
+    {
+        switch(intelligence)
+        {
+            case 5:
+                print("Super Intelligent");
+                break;
+            case 4:
+                print("Very Intelligent");
+                break;
+            case 3:
+                print("Intelligent");
+                break;
+            case 2:
+                print("Not so much");
+                break;
+            case 1:
+                print("mmmhhh");
+                break;
+            default:
+                print("Incorrect Intelligence level");
+                break;
+        }
+    }
+}
+```
+
 
 
 
