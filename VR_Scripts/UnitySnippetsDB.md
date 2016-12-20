@@ -1119,7 +1119,7 @@ public class Enumscript : MonoBehaviour
 }
 ```
 
-> **26. Switch**
+> **27. Switch**
 
 ```C#
 using UnityEngine;
