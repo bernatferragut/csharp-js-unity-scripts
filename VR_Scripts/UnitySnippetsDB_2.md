@@ -63,7 +63,7 @@ public class Game : MonoBehaviour
     }
 }
 ```
-> **01. TernaryOperator**
+> **02. TernaryOperator**
 
 ```C#
 using UnityEngine;
