@@ -63,6 +63,25 @@ public class Game : MonoBehaviour
     }
 }
 ```
+> **01. TernaryOperator**
+
+```C#
+using UnityEngine;
+using System.Collections;
+
+public class TernaryOperator : MonoBehaviour
+{
+    void Start()
+    {
+        int health = 10;
+        string message;
+
+        //TernaryOperator choose message based on health
+        //Similar to IF statements
+        message = health>0 ?; "Players is alive" : "Playes is moonkied";
+    }
+}
+```
 
 
 
