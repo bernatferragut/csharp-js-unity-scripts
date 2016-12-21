@@ -19,6 +19,7 @@ using System.Collections;
 public class Player : MonoBehaviour
 {
     //Member variables can be referred to as fields.
+    //By Getting or Setting you can make them visible or invisble
     public int Experience;
     {
         get
