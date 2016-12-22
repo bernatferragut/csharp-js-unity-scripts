@@ -143,7 +143,7 @@ public class PlayerManager : MonoBehaviour
    }
 }
 
-public class Utilities
+public static class Utilities
 {
    //A static method can be invoked without an objects
    //of a class. Note that static methods cannot access
@@ -154,9 +154,14 @@ public class Utilities
    }
 }
 
-public class 
+public class  UtilitiesExample : MonoBehaviour
 {
-   
+   void Start()
+   {
+       //You can access a static method by using the class name
+       //and the dot operator.
+       int x = Utilities.Add(5,6);
+   }
 }
 ```
 
