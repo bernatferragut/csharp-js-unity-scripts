@@ -143,9 +143,15 @@ public class PlayerManager : MonoBehaviour
    }
 }
 
-public class 
+public class Utilities
 {
-   
+   //A static method can be invoked without an objects
+   //of a class. Note that static methods cannot access
+   //non-static member variables.
+   public static int(int num1, int num2)
+   {
+       return num1 + num2;
+   }
 }
 
 public class 
