@@ -165,7 +165,7 @@ public class  UtilitiesExample : MonoBehaviour
 }
 ```
 
-> **03. MethodOverloading**
+> **04. MethodOverloading**
 
 ```c#
 using UnityEngine;
@@ -202,7 +202,7 @@ public class SomeOtherClass : MonoBehaviour
 }
 ```
 
-> **04. Generics**
+> **05. Generics**
 
 ```c#
 using UnityEngine;
@@ -266,7 +266,7 @@ public class GenericClassExample : MonoBehaviour
     }
 }
 ```
-> **05. Inheritance**
+> **06. Inheritance**
 
 ```C#
 using UnityEngine;
@@ -381,7 +381,7 @@ public class FruitSalad : MonoBehaviour
 }
 ```
 
-> **06. Polymorphism**
+> **07. Polymorphism**
 
 ```C#
 using UnityEngine;
@@ -459,6 +459,21 @@ public class FruitSalad : MonoBehaviour
         
         myApple.SayHello();
         myApple.Chop(); 
+    }
+}
+```
+> **08. MemberHiding**
+
+```C#
+using UnityEngine;
+using System.Collections;
+
+public class Humanoid
+{
+    //Base version of the Yell method
+    public void Yell()
+    {
+        Debug.Log("Humanoid version of the Yell() method");
     }
 }
 ```
