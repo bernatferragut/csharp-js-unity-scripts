@@ -680,3 +680,22 @@ public class SomeClass : MonoBehaviour
 }
 
 ```
+
+> **12. Namespaces**
+
+```c#
+using UnityEngine;
+using System.Collections;
+
+namespace SampleNamespace
+{
+    public class SomeClass : MonoBehaviour 
+    {
+        void Start () 
+        {
+         // DoStuff;
+        }
+    }
+}
+
+```
