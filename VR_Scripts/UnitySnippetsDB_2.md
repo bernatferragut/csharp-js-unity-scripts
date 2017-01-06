@@ -904,4 +904,18 @@ public class MotionScript : MonoBehaviour
         transform.Translate(-Input.GetAxis("Horizontal")*speed*Time.deltaTime, 0, 0);
     }
 }
+
+using UnityEngine;
+using System.Collections;
+
+public class LooAtScript : MonoBehaviour 
+{   
+    public Transform target;
+    
+    void Update () 
+    {
+        Vector3 relativePos = target.position - transform.position;
+        transform.rotation = Quaternion.LookRotation(relativePos);
+    }
+}
 ```
