@@ -981,5 +981,35 @@ namespace DelegateScript : MonoBhaviour
     }
 }
 
+using UnityEngine;
+using System.Collections;
+
+namespace MultiCastScript : MonoBhaviour
+{
+    delegate void MultiDelegate();
+    MultiDelegate myMultiDelegate;
+
+    void Start()
+    {
+        myMultiDelegate += PowerUp;
+        myMultiDelegate += TurnRed;
+
+        if (myMultiDelegate != null)
+        {
+            myMultiDelegate();
+        }
+    }
+
+    void PowerUp
+    {
+        print ("Orb is powering up!");
+    }
+
+    void TurnRed()
+    {
+        renderer.material.color = Color.red;
+    }
+}
+
 ```
 
