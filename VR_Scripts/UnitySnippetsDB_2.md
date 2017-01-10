@@ -1013,7 +1013,7 @@ namespace MultiCastScript : MonoBhaviour
 
 ```
 
-> **17. Atributes**
+> **17. Attributes**
 
 ```c#
 using UnityEngine;
@@ -1030,5 +1030,16 @@ namespace SpinScript :MonoBhaviour
     }
 }
 
+using UnityEngine;
+using System.Collections;
+
+[ExecuteEditMode]
+public class ColorScript : MonoBhaviour
+{
+    void Start()
+    {
+        renderer,sharedMaterial.color = Color.red;
+    }
+}
 ```
 
