@@ -950,7 +950,7 @@ public class SomeClass : MonoBehaviour
 }
 ```
 
-> **13. Delegates**
+> **16. Delegates**
 
 ```c#
 using UnityEngine;
@@ -1008,6 +1008,25 @@ namespace MultiCastScript : MonoBhaviour
     void TurnRed()
     {
         renderer.material.color = Color.red;
+    }
+}
+
+```
+
+> **12. Namespaces**
+
+```c#
+using UnityEngine;
+using System.Collections;
+
+namespace SampleNamespace
+{
+    public class SomeClass : MonoBehaviour 
+    {
+        void Start () 
+        {
+         // DoStuff;
+        }
     }
 }
 
