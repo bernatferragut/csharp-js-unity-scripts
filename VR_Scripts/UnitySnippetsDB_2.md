@@ -1013,20 +1013,20 @@ namespace MultiCastScript : MonoBhaviour
 
 ```
 
-> **12. Namespaces**
+> **17. Atributes**
 
 ```c#
 using UnityEngine;
 using System.Collections;
 
-namespace SampleNamespace
+namespace SpinScript :MonoBhaviour
 {
-    public class SomeClass : MonoBehaviour 
+    [Range(-100, 100])]
+    public int speed = 0;
+
+    void Update()
     {
-        void Start () 
-        {
-         // DoStuff;
-        }
+        transform.Rotate(new Vector3(0, speed * Time.deltaTime, 0);
     }
 }
 
