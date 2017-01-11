@@ -1042,4 +1042,15 @@ public class ColorScript : MonoBhaviour
     }
 }
 ```
+> **18. Attributes**
+
+```c#
+using UnityEngine;
+using System.Collections;
+
+namespace SpinScript :MonoBhaviour
+{
+   
+}
+```
 
