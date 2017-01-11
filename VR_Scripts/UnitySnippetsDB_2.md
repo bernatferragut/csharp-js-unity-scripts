@@ -1085,5 +1085,27 @@ namespace Teleport :MonoBhaviour
        transform.position = pos;
    }
 }
+
+using UnityEngine;
+using System.Collections;
+
+namespace TurnColorScript :MonoBhaviour
+{
+   void OnEnable()
+   {
+       EventManager.OnClicked += TurnColor;
+   }
+
+   void OnDisable()
+   {
+       EventManager.OnClicked -= TurnColor;
+   }
+
+   void TurnColor()
+   {
+       Color col = new Color(Random.value, Random.value);
+       renderer.material.color = col;
+   }
+}
 ```
 
